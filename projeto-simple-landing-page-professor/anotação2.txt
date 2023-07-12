@@ -1,0 +1,43 @@
+O svg também pode ser colocado no html, apenas copiar o código dele, e colar aonde quer colar.
+
+Caso  o svg não se adeque, vá a este site :
+https://jakearchibald.github.io/svgomg/
+Jogue o svg lá, e logo depois selecione "prefer viewbox to width/height"
+copie o código e arraste para a pasta aonde irá o colocar.
+
+para criar um contador, faça o seguinte;
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+}
+
+Counter reset, é aonde você vai querer que seja o contador, counter-increment é aonde 
+vai incrementar o contador, também terá que colocar no content, o nome do contador, se este 
+for o conteúdo do mesmo.
+
+
+"transform" é um elemento, usado em elementos 3d para distorcer, rodar, escalar, e fazer 
+mais coisas do tipo, geralmente é usado com elementos 3d, mas tem coisas que é úteis no 2d.
+scale(x,y) para aumentar o elemento, e rotate, para rodar o elemento, também translate(x,y)
+a imagem anda, no caso, x ela anda para direita se for positivo, e esquerda se for negativo, 
+e o y ela desce ou sobe.
+
+
+
+
+
+
+
+Para pegar símbolos no html, utilize este site =
+
+https://www.w3schools.com/charsets/ref_utf_misc_symbols.asp

@@ -1,0 +1,48 @@
+shift + alt + f = Organiza a linha
+shift + z = Quebra linha
+
+
+para colocar fontes, vá no : 
+https://fonts.google.com
+
+escolha a fonte e aperte em "select", selecione o link, ou importe.
+Coloque o link no html
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+Desta forma.
+
+Para colocar imagens = https://www.svgbackgrounds.com
+
+Escolha a imagem, logo após fazer tudo que quer na imagem, clique em download svg. Logo depois 
+selecione aonde deseja colocar o background, ex:
+
+.main-bg {
+    background-image: url('../img/main-bg.svg');
+    background-size: cover; <-- 
+    background-position: center center; <-- 
+}
+
+os dois elementos marcados, foram colocados para que, quando mexer na tela, diminuindo ou 
+aumentando, será possível diminuir e aumentar a imagem.
+
+Criando variáveis: 
+:root {
+    --primary-color: #0a1128;
+}
+
+Será uma variável para todos conteúdos, e pode selecionar ela também.
+
+.main-bg {
+    background-image: url('../img/main-bg.svg');
+    background-size: cover; 
+    background-position: center center; 
+    color: var(--white-color);
+}
+
+
+Agora, quando for usar o maing-bg, a cor das fontes irão ser brancas
