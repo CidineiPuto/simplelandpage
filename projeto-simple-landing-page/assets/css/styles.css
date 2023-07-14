@@ -262,9 +262,8 @@ a {
 
 
 .responsive-table {
-    overflow-x: auto;
     overflow: hidden;
-
+    overflow-x: auto;
 }
 
 table {
@@ -391,17 +390,20 @@ fieldset {
     transition: all 600ms ease-in-out;
 }
 
-.back-to-top::after {
-    position: absolute;
-    content: "";
-    width: calc(5rem / 4);
-    height: calc(5rem / 4);
-    border-width: 0.5rem;
-    border-style: solid;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    top: 1.8rem;
-    transform: rotate(135deg);
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
 }
 
 .close-menu {
@@ -409,7 +411,7 @@ fieldset {
 }
 
 
-@media (max-width: 800px) {
+@media  (max-width: 800px) {
     .intro-content, .top3-grid-principal-content, .gallery-img-content {
         grid-template-columns: 1fr;
     }
@@ -429,7 +431,7 @@ fieldset {
     }
 
     .menu {
-        display: flex;
+        display: block;
         bottom: 0;
         text-align: center;
         align-items: center;
@@ -441,7 +443,7 @@ fieldset {
     }
 
     .menu-content {
-        min-height: 100vh;
+        height: 100vh;
     }
 
     .menu {
@@ -470,7 +472,7 @@ fieldset {
     }
 
     .close-menu:checked~.menu {
-        display: flex;
+        display: block;
     }
 
     .close-menu:checked~.close-menu-label::after {
@@ -480,4 +482,38 @@ fieldset {
     .close-menu:checked~.back-to-top {
         display: none;
     }
+}
+
+@media (min-width: 300px)  and (max-width: 486px) {
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    .top3-grid-principal-content h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .top3-grid-principal-content h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
 }
